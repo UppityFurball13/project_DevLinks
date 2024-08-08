@@ -28,17 +28,20 @@ body {
 /*background-image -repeat -position /-size:;  
   cover cobre toda a area visivel do user e tem como traduzir tudo isso em uma linha*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 580px;
   margin: 56px auto 0px;
-  padding: 0 24px;  
+  padding: 0 24px; 
 }
 /* profile */
 #profile {
@@ -161,6 +164,16 @@ footer {
   text-align: center;
   font-size: 16px;
   padding: 24px 0;
+}
+
+/* media queries */
+@media (min-witdh: 700px) {
+  :root{
+    --bg-url: url(../images/assets/bg-desktop.jpg)
+  }
+  .light {
+    --bg-url: url(../images/assets/bg-desktop-light.jpg)
+  }
 }
 
 
